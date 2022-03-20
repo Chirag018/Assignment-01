@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import HomePage from './pages/HomePage';
-import UserDetail from './pages/UserDetail';
-import Post from './pages/Post';
-import Album from './pages/Album';
-import PostDetail from './pages/PostDetail';
-import AlbumDetail from './pages/AlbumDetail';
+import HomePage from '../pages/HomePage';
+import UserDetail from '../pages/UserDetail';
+import Post from '../pages/Post';
+import Album from '../pages/Album';
+import PostDetail from '../pages/PostDetail';
+import AlbumDetail from '../pages/AlbumDetail';
 
 function Home() {
     return (

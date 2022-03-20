@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams} from 'react-router'
+import { useParams } from 'react-router'
 
 function AlbumDetail() {
 
@@ -19,14 +19,22 @@ function AlbumDetail() {
     return (
         <div className='space-y-3'>
             <h1 className='text-3xl font-serif'>Album</h1>
-            <p>Details</p>
+            <p>Details : </p>
+            {data && data.map((val) => {
+                return (
+                    <div key={val.id} className='flex space-x-3'>
+                        <span>{val.id}</span>
+                        <h1 className='text-xl capitalize'>{val.title}</h1>
+                    </div>
+                )
+            })}
             <h1 className='text-3xl font-serif'>Photos :</h1>
             <div >
                 {data.map((val) => {
                     return (
                         <div key={val.id} className='border-2 flex max-w-lg flex-row justify-between items-center capitalize'>
                             <h1>{val.title}</h1>
-                            <img src={val.thumbnailUrl}/>
+                            <img src={val.thumbnailUrl} />
                         </div>
                     )
                 })}

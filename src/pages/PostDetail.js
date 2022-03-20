@@ -28,14 +28,14 @@ function PostDetail() {
       </div>
       <div>
         <p className=''>Details :</p>
-        {/* {data && data.map((val) => {
+        {data && data.map((val) => {
           return (
-            <div key={val.id}>
-              <h1>{val.name}</h1>
-              <p>{val.body}</p>
+            <div key={val.id} className='flex space-x-3'>
+              <span>{val.id}</span>
+              <h1 className='text-xl capitalize'>{val.name}</h1>
             </div>
           )
-        })} */}
+        })}
 
       </div>
       <h1 className='text-2xl font-serif'>Comments</h1>
