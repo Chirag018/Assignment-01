@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router'
+import { useParams} from 'react-router'
 
 function AlbumDetail() {
 
     let { id } = useParams();
-    let navigate = useNavigate();
     const [data, setData] = useState([]);
-    console.log(id);
     useEffect(() => {
 
         const fetchData = async () => {
@@ -27,7 +25,6 @@ function AlbumDetail() {
                 {data.map((val) => {
                     return (
                         <div key={val.id} className='border-2 flex max-w-lg flex-row justify-between items-center capitalize'>
-                            {/* <h6>{val.id}</h6> */}
                             <h1>{val.title}</h1>
                             <img src={val.thumbnailUrl}/>
                         </div>
@@ -49,4 +46,3 @@ export default AlbumDetail
 
 
 
-// design as per need
